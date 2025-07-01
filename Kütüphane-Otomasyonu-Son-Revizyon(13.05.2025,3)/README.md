@@ -1,6 +1,6 @@
 # Kütüphane Otomasyonu
 
-Bu proje, bir kütüphane yönetim sistemini web tabanlı olarak yönetmek için geliştirilmiştir. Kullanıcılar kitap ekleyebilir, güncelleyebilir, silebilir, ödünç alabilir ve iade edebilir. Ayrıca yönetici paneli ile kullanıcı ve kitap yönetimi yapılabilir.
+Kütüphane Otomasyonu, kitap ve üye işlemlerini kolaylaştıran, web tabanlı bir kütüphane yönetim sistemidir. Kullanıcılar kitap ekleyebilir, güncelleyebilir, silebilir, ödünç alabilir ve iade edebilir. Yönetici paneli ile tüm işlemler kolayca yönetilebilir.
 
 ## Özellikler
 - Kitap ekleme, silme, güncelleme

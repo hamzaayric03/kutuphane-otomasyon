@@ -1,0 +1,455 @@
+/* KitapGuncelleVeSil.css */
+
+.kitap-guncelle-container {
+  max-width: 1400px;
+  margin: 40px auto;
+  padding: 40px;
+  background: var(--surface-1);
+  border-radius: 24px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-light);
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.back-button:active {
+  transform: translateY(0);
+}
+
+.kitap-guncelle-container h2 {
+  font-size: 2.4rem;
+  color: var(--text-primary);
+  margin-bottom: 35px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.kitap-guncelle-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 4px;
+}
+
+.page-header h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  padding-bottom: 0;
+  text-align: right;
+}
+
+.page-header h2::after {
+  display: none;
+}
+
+.search-bar {
+  position: relative;
+  margin: 0 auto 30px;
+  max-width: 800px;
+  background: var(--surface-2);
+  border-radius: 16px;
+  padding: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.search-bar:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 15px 20px;
+  padding-right: 50px;
+  padding-left: 45px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  background: transparent;
+  color: var(--text-primary);
+}
+
+.search-bar input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+  outline: none;
+}
+
+.search-bar input::placeholder {
+  color: var(--text-tertiary);
+  opacity: 0.8;
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.3rem;
+  color: #667eea;
+  transition: all 0.3s ease;
+}
+
+.search-bar:focus-within .search-icon {
+  color: #5a67d8;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.kitap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+  padding: 10px;
+}
+
+.kitap-card {
+  background: var(--surface-2);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border: 1px solid var(--border-light);
+  position: relative;
+}
+
+.kitap-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.kitap-content {
+  padding: 25px;
+  position: relative;
+}
+
+.kitap-content h3 {
+  margin: 0 0 15px 0;
+  color: var(--text-primary);
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.kitap-content p {
+  margin: 8px 0;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.kitap-content .yazar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  color: #667eea;
+}
+
+.kitap-content .isbn {
+  font-family: monospace;
+  background: rgba(102, 126, 234, 0.1);
+  padding: 4px 8px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.kitap-content .kategori {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(118, 75, 162, 0.1);
+  color: #764ba2;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.kitap-actions {
+  padding: 20px 25px;
+  background: var(--surface-1);
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  gap: 15px;
+}
+
+.edit-button,
+.delete-button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.edit-button {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+.edit-button:hover {
+  background: linear-gradient(135deg, #5a67d8, #6b3d99);
+  transform: translateY(-2px);
+}
+
+.delete-button {
+  background: #fff;
+  color: #fc8181;
+  border: 2px solid #fc8181;
+}
+
+.delete-button:hover {
+  background: #fc8181;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: var(--surface-1);
+  padding: 35px;
+  border-radius: 24px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--border-light);
+  animation: slideUp 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.modal h3 {
+  margin: 0 0 25px 0;
+  color: var(--text-primary);
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid var(--border-light);
+  border-radius: 12px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  background: var(--surface-2);
+  color: var(--text-primary);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+  outline: none;
+}
+
+.success-message {
+  background: linear-gradient(135deg, #48bb78, #38a169);
+  color: white;
+  padding: 18px 25px;
+  border-radius: 16px;
+  margin-bottom: 25px;
+  text-align: center;
+  animation: fadeIn 0.4s ease-out;
+  font-weight: 500;
+  font-size: 1.1rem;
+  box-shadow: 0 8px 20px rgba(56, 161, 105, 0.2);
+}
+
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  gap: 20px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(102, 126, 234, 0.1);
+  border-top: 4px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.loading-spinner p {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .kitap-guncelle-container {
+    margin: 20px;
+    padding: 25px;
+  }
+
+  .kitap-guncelle-container h2 {
+    font-size: 2rem;
+  }
+
+  .kitap-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .modal {
+    width: 95%;
+    padding: 25px;
+  }
+
+  .edit-button,
+  .delete-button {
+    padding: 10px 16px;
+    font-size: 0.95rem;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.save-button, 
+.cancel-button {
+  flex: 1;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.save-button {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+.save-button:hover {
+  background: linear-gradient(135deg, #5a67d8, #6b3d99);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(118, 75, 162, 0.3);
+}
+
+.cancel-button {
+  background: #fff;
+  color: #fc8181;
+  border: 2px solid #fc8181;
+}
+
+.cancel-button:hover {
+  background: #fc8181;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(252, 129, 129, 0.3);
+}
+  

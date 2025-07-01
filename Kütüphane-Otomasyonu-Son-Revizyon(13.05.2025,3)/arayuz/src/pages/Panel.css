@@ -1,0 +1,315 @@
+.panel-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 40px 20px;
+  background: var(--surface-1);
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-light);
+  animation: fadeIn 0.6s ease-out;
+  position: relative;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.confirm-dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+  backdrop-filter: blur(4px);
+}
+
+.confirm-dialog {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: scaleIn 0.3s ease-out forwards;
+  transform-origin: center;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.confirm-dialog-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.confirm-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #f09819 0%, #ff5858 100%);
+  border-radius: 50%;
+  color: white;
+}
+
+.confirm-icon svg {
+  width: 40px;
+  height: 40px;
+}
+
+.confirm-dialog h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0;
+  font-weight: 600;
+}
+
+.confirm-dialog p {
+  font-size: 1rem;
+  color: #666;
+  margin: 15px 0 25px;
+}
+
+.confirm-dialog-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.cancel-button {
+  background: #f1f1f1;
+  color: #333;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cancel-button:hover {
+  background: #e5e5e5;
+}
+
+.confirm-button {
+  background: linear-gradient(135deg, #ff5858 0%, #f09819 100%);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 8px rgba(240, 152, 25, 0.3);
+}
+
+.confirm-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(240, 152, 25, 0.4);
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.panel-container h2 {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 15px;
+  margin: 0;
+}
+
+.panel-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 2px;
+}
+
+.logout-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #ff5858 0%, #f09819 100%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 88, 88, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.logout-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.logout-button:hover::before {
+  left: 100%;
+}
+
+.logout-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 88, 88, 0.4);
+}
+
+.logout-button:active {
+  transform: translateY(0);
+}
+
+.logout-icon {
+  font-size: 1.3rem;
+  stroke-width: 2.2;
+  transition: transform 0.3s ease;
+}
+
+.logout-button:hover .logout-icon {
+  transform: translateX(3px);
+}
+
+.panel-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.panel-button {
+  position: relative;
+  padding: 25px 35px;
+  background: var(--surface-2);
+  color: var(--text-primary);
+  text-decoration: none;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border-light);
+}
+
+.panel-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.panel-button small {
+  color: var(--text-secondary);
+}
+
+.panel-button:hover {
+  transform: translateY(-5px);
+  background: var(--surface-3);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.panel-button:hover::before {
+  opacity: 1;
+}
+
+.panel-button span {
+  font-size: 1.5rem;
+  margin-right: 8px;
+}
+
+/* Responsive tasarım için */
+@media (max-width: 768px) {
+  .panel-container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .panel-container h2 {
+    font-size: 2rem;
+  }
+  
+  .panel-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .logout-button {
+    align-self: flex-end;
+  }
+
+  .panel-actions {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .panel-button {
+    padding: 20px 30px;
+  }
+  
+  .confirm-dialog {
+    width: 85%;
+    padding: 25px;
+  }
+}
+  

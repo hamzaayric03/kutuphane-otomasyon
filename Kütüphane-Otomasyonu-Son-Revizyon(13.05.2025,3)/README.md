@@ -60,3 +60,4 @@ Kütüphane-Otomasyonu-Son-Revizyon(13.05.2025,3)/
 └── ...
 ```
 
+![Kütüphane Görseli](Kütüphane-Otomasyonu-Son-Revizyon(13.05.2025,3)/arayuz/public/img/otomasyon_arayuz1)

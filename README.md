@@ -59,3 +59,8 @@ Kütüphane-Otomasyonu-Son-Revizyon(13.05.2025,3)/
 ├── KUTUPHANE-DB-SQL.sql # Veritabanı scripti
 └── ...
 ```
+
+![otomasyon_arayuz1](https://github.com/user-attachments/assets/5f7aa02d-e62e-4475-898a-570d6fb2069b)
+
+
+
